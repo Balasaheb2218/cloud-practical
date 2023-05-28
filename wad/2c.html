@@ -1,0 +1,129 @@
+Code:
+Login.html
+<mat-card>
+    <mat-card-header>
+        <h2>User Login</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="id" >
+            </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" >
+              </mat-form-field>
+            
+              <div>
+                <button mat-raised-button color="primary">Login</button>
+                <a routerLink="/register" mat-raised-button color="accent">New User?</a>
+              </div>
+          </form>
+    </mat-card-content>
+  </mat-card>
+
+
+
+Login.ts
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { LoginComponent } from './login.component';
+
+describe('LoginComponent', () => {
+  let component: LoginComponent;
+  let fixture: ComponentFixture<LoginComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ LoginComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(LoginComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+Register.html
+<mat-card>
+    <mat-card-header>
+        <h2>Registeration</h2>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregister()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <input matInput formControlName="id" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" >
+              </mat-form-field>
+              <mat-radio-group formControlName="gender" aria-label="Select an option">
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+              <div>
+                <button mat-raised-button color="primary">Submit</button>
+                <a routerLink="/login" mat-raised-button color="accent">Back to Login</a>
+              </div>
+          </form>
+    </mat-card-content>
+  </mat-card>
+
+
+
+Register.ts
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { RegisterComponent } from './register.component';
+
+describe('RegisterComponent', () => {
+  let component: RegisterComponent;
+  let fixture: ComponentFixture<RegisterComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ RegisterComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(RegisterComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+
+
+
+
+
+OUTPUT:
+ 
+
+ 
+
+
+
+
+
